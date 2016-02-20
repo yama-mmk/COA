@@ -29,21 +29,21 @@ public class VegetableGenerator : MonoBehaviour {
                 break;
             case GameManager.LEVEL.NORMAL:
                 generate_time += Time.deltaTime;
-                if (generate_time >= 3.0f) {
+                if (generate_time >= 2.5f) {
                     GenerateVegetable();
                     generate_time = 0.0f;
                 }
                 break;
             case GameManager.LEVEL.HARD:
                 generate_time += Time.deltaTime;
-                if (generate_time >= 3.0f) {
+                if (generate_time >= 2.0f) {
                     GenerateVegetable();
                     generate_time = 0.0f;
                 }
                 break;
             case GameManager.LEVEL.VERYHARD:
                 generate_time += Time.deltaTime;
-                if (generate_time >= 3.0f) {
+                if (generate_time >= 1.5f) {
                     GenerateVegetable();
                     generate_time = 0.0f;
                 }
