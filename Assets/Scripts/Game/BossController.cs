@@ -19,7 +19,7 @@ public class BossController : MonoBehaviour {
 		if (Slash != null && other.gameObject.tag == "Vegetable") {
 			Debug.Log ("Boss Collision Vegetable");
 			Instantiate (Slash,
-			            other.transform.position,
+			            other.transform.position + new Vector3(-0.5f, 0.0f, 0.0f),
 			            Quaternion.identity);
 		}
 	}
