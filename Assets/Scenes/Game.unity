@@ -267,8 +267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d44851fb671641d89251f7604d9be8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  RecoverySpeed: 1
   jumpSpeed: 12
+  defaultPosition: 3
   defaultJumpCount: 2
 --- !u!1 &322896631
 GameObject:
