@@ -3,13 +3,20 @@ using System.Collections;
 
 public class VegetableController : MonoBehaviour {
 
-    public float speed = 3f;
+    public float speed;
 
-	void Start () {
-	
-	}
+    public enum Type {
+        TYPE1 = 0,
+        TYPE2 = 1,
+    };
+
+    public Type type = Type.TYPE1;
 
 	void Update () {
-        gameObject.transform.Translate(new Vector2(speed * -0.01f, 0));
+        if (type == Type.TYPE1) {
+            gameObject.transform.Translate(new Vector2(speed * -0.01f, 0));
+        } else {
+            gameObject.transform.Translate(new Vector2(0, speed * 0.01f));
+        }
 	}
 }
