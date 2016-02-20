@@ -21,6 +21,7 @@ public class BossController : MonoBehaviour {
 			Instantiate (Slash,
 			            other.transform.position + new Vector3(-0.5f, 0.0f, 0.0f),
 			            Quaternion.identity);
+
 		}
 	}
 

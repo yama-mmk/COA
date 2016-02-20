@@ -19,4 +19,12 @@ public class VegetableController : MonoBehaviour {
             gameObject.transform.Translate(new Vector2(0, speed * 0.01f));
         }
 	}
+
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.tag == "Boss") {
+			Debug.Log ("Vegirtable Collision");
+
+			Destroy (gameObject);
+		}
+	}
 }
