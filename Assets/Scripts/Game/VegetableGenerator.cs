@@ -55,7 +55,7 @@ public class VegetableGenerator : MonoBehaviour {
 
     void GenerateVegetable() {
         int num = Random.Range(0, vegetables.Count);
-        Instantiate(vegetables[num], new Vector2(12.0f, -2.0f), Quaternion.identity);
+        Instantiate(vegetables[num], new Vector2(12.0f, -1.8f), Quaternion.identity);
     }
 
     // レベル更新

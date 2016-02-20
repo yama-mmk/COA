@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour {
 
         switch(state) {
             case State.READY:
-
                 if (time >= 3.0f) {
                     time = 0.0f;
                     state = State.PLAYING;
@@ -53,7 +52,6 @@ public class GameManager : MonoBehaviour {
                 }
                 break;
             case State.PLAYING:
-
                 if (time >= 4.0f) {
                     time = 0.0f;
                     if ((int)level == 3) {
