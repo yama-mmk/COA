@@ -4,6 +4,8 @@ using System.Collections;
 public class VegetableController : MonoBehaviour {
 
     public float speed;
+	public GameObject cutVegetable1;
+	public GameObject cutVegetable2;
 
     public enum Type {
         TYPE1 = 0,
@@ -22,7 +24,15 @@ public class VegetableController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.tag == "Boss") {
-			Debug.Log ("Vegirtable Collision");
+			if(cutVegetable1 != null && cutVegetable2 != null){
+			Instantiate (cutVegetable1,
+			             transform.position + new Vector3 (0.0f, 0.2f, 0.0f),
+			             Quaternion.identity);
+			
+			Instantiate (cutVegetable2,
+			             transform.position + new Vector3 (0.0f, -0.2f, 0.0f),
+			             Quaternion.identity);
+			}
 
 			Destroy (gameObject);
 		}

@@ -69,6 +69,9 @@ TagManager:
   - name: Boss
     uniqueID: 3517868431
     locked: 0
+  - name: cutVegetable
+    uniqueID: 2649707933
+    locked: 0
   - name: Slash
     uniqueID: 1077155685
     locked: 0

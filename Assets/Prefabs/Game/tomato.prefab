@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  cutVegetable1: {fileID: 119212, guid: 9687b026ce7e949a19e25d58f2b04a62, type: 2}
+  cutVegetable2: {fileID: 137876, guid: 424da3fff05814854ad55bbdeca7c129, type: 2}
   type: 0
 --- !u!212 &21274638
 SpriteRenderer:
