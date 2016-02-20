@@ -49,17 +49,17 @@ TagManager:
   - name: Cloud
     uniqueID: 1978858231
     locked: 0
-  - name: Floor
+  - name: river
     uniqueID: 2777377251
-    locked: 0
-  - name: Floor2
-    uniqueID: 3815060877
     locked: 0
   - name: Item
     uniqueID: 3395911771
     locked: 0
   - name: Vegetable
     uniqueID: 2787795909
+    locked: 0
+  - name: ground
+    uniqueID: 3815060877
     locked: 0
   - name: Player
     uniqueID: 1917089511
