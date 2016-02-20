@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour {
     public LEVEL level = LEVEL.NONE;
 
     // 時間
-    private float time = 0.0f;
+    public float time = 0.0f;
 
     private VegetableGenerator generator;
 
@@ -46,25 +46,22 @@ public class GameManager : MonoBehaviour {
         switch(state) {
             case State.READY:
 
-                if (time >= 5.0f) {
+                if (time >= 3.0f) {
                     time = 0.0f;
                     state = State.PLAYING;
+                    generator.level = LEVEL.EASY;
                 }
                 break;
             case State.PLAYING:
 
-                if (time >= 15.0f) {
+                if (time >= 4.0f) {
                     time = 0.0f;
-                    switch(level) {
-                        case LEVEL.EASY:
-                            generator.UpdateLevel(LEVEL.NORMAL);
-                            break;
-                        case LEVEL.NORMAL:
-                            generator.UpdateLevel(LEVEL.HARD);
-                            break;
-                        case LEVEL.HARD:
-                            generator.UpdateLevel(LEVEL.VERYHARD);
-                            break;
+                    if ((int)level == 3) {
+                        level = 0;
+                        generator.UpdateLevel(level);
+                    } else {
+                        level++;
+                        generator.UpdateLevel(level);
                     }
                 }
                 break;
@@ -74,4 +71,8 @@ public class GameManager : MonoBehaviour {
                 break;
         }
 	}
+
+    public void GameOver() {
+        Debug.Log("Game Over");
+    }
 }
