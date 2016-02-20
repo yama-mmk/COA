@@ -138,8 +138,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 131053072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.90999985, y: -2.48000002, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: -6.98000002, y: -.860000014, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -168,9 +168,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -.300000012, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: .800000012}
+  m_Size: {x: 1.29999995, y: 3}
 --- !u!1 &173234498
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +182,7 @@ GameObject:
   - 212: {fileID: 173234499}
   - 61: {fileID: 173234501}
   - 50: {fileID: 173234502}
+  - 114: {fileID: 173234503}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -249,12 +250,26 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &173234503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 173234498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d44851fb671641d89251f7604d9be8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  jumpSpeed: 12
+  defaultJumpCount: 2
 --- !u!1 &322896631
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +367,7 @@ GameObject:
   - 114: {fileID: 747504578}
   m_Layer: 0
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
