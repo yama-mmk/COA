@@ -66,6 +66,10 @@ public class GameManager : MonoBehaviour {
                 }
                 break;
             case State.FINISH:
+				time += Time.deltaTime;
+				if(time > 4.0f) {
+					Application.LoadLevel("Result");
+				}
                 break;
             default:
                 break;
@@ -74,5 +78,7 @@ public class GameManager : MonoBehaviour {
 
     public void GameOver() {
         Debug.Log("Game Over");
+		state = State.FINISH;
+		time = 0;
     }
 }
