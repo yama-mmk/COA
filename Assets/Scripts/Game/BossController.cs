@@ -14,10 +14,12 @@ public class BossController : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter2D(Collision2D collision){
-		if (collision.gameObject.tag == "Vegitable") {
+	void OnTriggerEnter2D(Collider2D other){
+
+		if (Slash != null && other.gameObject.tag == "Vegetable") {
+			Debug.Log ("Boss Collision Vegetable");
 			Instantiate (Slash,
-			            transform.position,
+			            other.transform.position,
 			            Quaternion.identity);
 		}
 	}

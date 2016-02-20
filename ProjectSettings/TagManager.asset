@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Boss
   - Floor
+  - Vegetable
   layers:
   - Default
   - TransparentFX
@@ -66,4 +67,7 @@ TagManager:
     locked: 0
   - name: Boss
     uniqueID: 3517868431
+    locked: 0
+  - name: Slash
+    uniqueID: 1077155685
     locked: 0
