@@ -100,7 +100,7 @@ GameObject:
   - 50: {fileID: 131053075}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,7 +251,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 3
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -537,6 +537,7 @@ MonoBehaviour:
   - {fileID: 145954, guid: e45be7733b0accf47b03b0b0c341255e, type: 2}
   - {fileID: 116948, guid: 23c03af196288cd499e5af7185c72ed6, type: 2}
   - {fileID: 153466, guid: 379c9b1935e4966488b8c7b42d70bf5e, type: 2}
+  - {fileID: 132702, guid: 0ca7eadc48cac724d925ef194ab8db0a, type: 2}
   level: 0
 --- !u!1 &2006574912
 GameObject:

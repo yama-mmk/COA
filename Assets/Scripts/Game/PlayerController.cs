@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
 			jumpCount = defaultJumpCount;
 		}
 
-		if (collision.gameObject.tag == "Floor") {
+		if (collision.gameObject.tag == "Boss") {
 			gameManager.GameOver ();
 		}
 	}
