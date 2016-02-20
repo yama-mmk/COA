@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour {
         time = 0.0f;
 
         generator = GameObject.Find("VegetableGenerator").GetComponent<VegetableGenerator>();
+
+        SoundManager.Instance.PlayBGM(0);
 	}
 
 	void Update () {

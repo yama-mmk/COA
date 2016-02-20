@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
 		if (Input.GetButtonDown ("Fire1") && jumpCount > 0) {
+            SoundManager.Instance.PlaySE(4);
 			JumpAction ();
             animator.SetTrigger("Jump");
 		}
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		if (collision.gameObject.tag == "Boss") {
+            SoundManager.Instance.PlaySE(9);
             animator.SetTrigger("Col");
 			gameManager.GameOver ();
 		}
