@@ -32,9 +32,9 @@ public class PlayerController : MonoBehaviour {
 			rb.velocity = new Vector2(RecoverySpeed, rb.velocity.y);
 		}
 
-        if (rb.velocity.y < -0.1f) {
+        if (rb.velocity.y < -0.01f) {
             animator.SetFloat("JumpVal", -1.0f);
-        } else if (rb.velocity.y > 0.1f) {
+        } else if (rb.velocity.y > 0.01f) {
             animator.SetFloat("JumpVal", 1.0f);
         }
 	}
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.gameObject.tag == "Floor") {
-            animator.SetTrigger("isGround");
+            // animator.SetTrigger("isGround");
             animator.SetFloat("JumpVal", 0.0f);
 			jumpCount = defaultJumpCount;
 		}
