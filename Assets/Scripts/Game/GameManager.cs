@@ -35,6 +35,12 @@ public class GameManager : MonoBehaviour {
 
     static public int final_value; // シーンをまたいでスコアを保管する変数
 
+    public float READY_TIME = 3;
+
+    void Awake() {
+        // Fader.instance.BlackIn(2.0f);
+    }
+
 	void Start () {
         // 初期化
         state = State.READY;
