@@ -12,7 +12,7 @@ public class TitleManager : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("Fire1")) {
             // Application.LoadLevel("Game");
-            SoundManager.Instance.PlaySE(0);
+            SoundManager.Instance.PlaySE((int)Random.Range(0, 1));
             Fader.instance.BlackOut(1.0f, "Description");
         }
 	}
