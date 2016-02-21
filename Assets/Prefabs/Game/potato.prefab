@@ -13,6 +13,7 @@ GameObject:
   - 50: {fileID: 5095740}
   - 114: {fileID: 11420110}
   - 60: {fileID: 6000368}
+  - 61: {fileID: 6154916}
   m_Layer: 0
   m_Name: potato
   m_TagString: Vegetable
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.55000019, y: -3.14400005, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -81,9 +82,9 @@ PolygonCollider2D:
       - {x: -.610000014, y: 1.005}
       - {x: -1.04999995, y: 1.005}
       - {x: -1.13, y: .964999974}
-      - {x: -1.43999994, y: .694999993}
+      - {x: -1.25848866, y: .863481522}
       - {x: -1.53999996, y: .555000007}
-      - {x: -1.64999998, y: .305000007}
+      - {x: -1.61305428, y: .249581337}
       - {x: -1.64999998, y: -.185000002}
       - {x: -1.5999999, y: -.314999998}
       - {x: -1.50999999, y: -.444999993}
@@ -105,9 +106,22 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -1.20000005, y: 0}
+  m_Offset: {x: -.0209926367, y: -.485141754}
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.00999999}
+  m_Size: {x: 3.35801482, y: 1.03971648}
+--- !u!61 &6154916
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116948}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: .0646572113, y: .831281662}
+  serializedVersion: 2
+  m_Size: {x: 2.87512231, y: .458276749}
 --- !u!114 &11420110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,6 +136,7 @@ MonoBehaviour:
   speed: 6
   cutVegetable1: {fileID: 131178, guid: cc294272dcf2a425fb1070192f917046, type: 2}
   cutVegetable2: {fileID: 162360, guid: be24135d22ca94fb1a6eefa3c9aacce5, type: 2}
+  level: 0
   type: 0
 --- !u!212 &21231408
 SpriteRenderer:

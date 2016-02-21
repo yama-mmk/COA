@@ -14,6 +14,8 @@ GameObject:
   - 114: {fileID: 11484408}
   - 60: {fileID: 6045640}
   - 58: {fileID: 5860540}
+  - 58: {fileID: 5853324}
+  - 61: {fileID: 6197206}
   m_Layer: 0
   m_Name: carot2
   m_TagString: Vegetable
@@ -27,29 +29,40 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132702}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: 5.22, y: -2.5, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
+  m_LocalPosition: {x: 5.21999979, y: -2.5, z: 0}
+  m_LocalScale: {x: .600000024, y: .600000024, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!50 &5076046
 Rigidbody2D:
-  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132702}
-  m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: .0500000007
   m_GravityScale: 0
+  m_FixedAngle: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+--- !u!58 &5853324
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132702}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: .400000006, y: 0}
+  serializedVersion: 2
+  m_Radius: .600000024
 --- !u!58 &5860540
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -57,13 +70,12 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132702}
   m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: .800000012
 --- !u!60 &6045640
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -71,72 +83,71 @@ PolygonCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132702}
   m_Enabled: 0
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 2.075, y: -0.78}
-      - {x: 1.9617865, y: -0.96844363}
-      - {x: 1.985, y: -0.48}
-      - {x: 2.061424, y: -0.5908284}
-      - {x: 2.0810094, y: -0.65963686}
-      - {x: 2.107797, y: -0.6912424}
-      - {x: 2.016968, y: -0.95808035}
-      - {x: 2.3549998, y: -0.34202042}
-      - {x: 2.375, y: -0.13}
-      - {x: 2.3353195, y: 0.5314378}
-      - {x: 1.8248482, y: 0.9826355}
-      - {x: 1.3153625, y: 0.9964757}
-      - {x: 1.3066059, y: 0.9816063}
-      - {x: 0.92458546, y: 0.93362707}
-      - {x: 0.93619186, y: 0.9280306}
-      - {x: 0.039301805, y: 0.79601043}
-      - {x: 0.022514356, y: 0.79720175}
-      - {x: 0.7110099, y: 0.87160647}
-      - {x: 0.265, y: 0.83}
-      - {x: 0.035, y: 0.83}
-      - {x: -0.005, y: 0.78999996}
-      - {x: -0.155, y: 0.77}
-      - {x: -0.355, y: 0.75}
-      - {x: -0.48499998, y: 0.76}
-      - {x: -0.505, y: 0.71}
-      - {x: -0.59499997, y: 0.7}
-      - {x: -0.755, y: 0.66999996}
-      - {x: -0.935, y: 0.64}
-      - {x: -1.055, y: 0.65}
-      - {x: -1.135, y: 0.59}
-      - {x: -1.3149999, y: 0.56}
-      - {x: -1.685, y: 0.45999998}
-      - {x: -1.995, y: 0.34}
-      - {x: -2.185, y: 0.26}
-      - {x: -2.365, y: 0.12}
-      - {x: -2.375, y: 0.089999996}
-      - {x: -2.375, y: -0.14}
-      - {x: -2.2649999, y: -0.24}
-      - {x: -2.145, y: -0.32}
-      - {x: -2.0149999, y: -0.39}
-      - {x: -1.885, y: -0.44}
-      - {x: -1.495, y: -0.56}
-      - {x: -1.415, y: -0.57}
-      - {x: -0.995, y: -0.66999996}
-      - {x: -0.895, y: -0.69}
-      - {x: -0.405, y: -0.78}
-      - {x: -0.205, y: -0.81}
-      - {x: 0.095, y: -0.84999996}
-      - {x: 0.295, y: -0.87}
-      - {x: 0.615, y: -0.87}
-      - {x: 0.7594035, y: -0.8744033}
-      - {x: 0.91499984, y: -0.87481815}
-      - {x: 0.66655463, y: -0.83082837}
-      - {x: 0.7065549, y: -0.8396371}
-      - {x: 1.0845852, y: -0.900828}
-      - {x: 1.4577979, y: -0.9488075}
-      - {x: 1.665, y: -1}
-      - {x: 1.9549999, y: -1}
-      - {x: 2.0149999, y: -0.96}
+    - - {x: 2.07500005, y: -.779999971}
+      - {x: 1.96178651, y: -.968443632}
+      - {x: 1.98500001, y: -.479999989}
+      - {x: 2.06142402, y: -.590828419}
+      - {x: 2.08100939, y: -.659636855}
+      - {x: 2.10779691, y: -.691242397}
+      - {x: 2.01696801, y: -.958080351}
+      - {x: 2.35499978, y: -.342020422}
+      - {x: 2.375, y: -.129999995}
+      - {x: 2.33531952, y: .531437814}
+      - {x: 1.82484818, y: .982635498}
+      - {x: 1.31536245, y: .996475697}
+      - {x: 1.30660594, y: .981606305}
+      - {x: .924585462, y: .933627069}
+      - {x: .936191857, y: .92803061}
+      - {x: .0393018052, y: .796010435}
+      - {x: .0225143563, y: .797201753}
+      - {x: .71100992, y: .871606469}
+      - {x: .264999986, y: .829999983}
+      - {x: .0350000001, y: .829999983}
+      - {x: -.00499999989, y: .789999962}
+      - {x: -.155000001, y: .769999981}
+      - {x: -.354999989, y: .75}
+      - {x: -.484999985, y: .75999999}
+      - {x: -.504999995, y: .709999979}
+      - {x: -.594999969, y: .699999988}
+      - {x: -.754999995, y: .669999957}
+      - {x: -.935000002, y: .639999986}
+      - {x: -1.05499995, y: .649999976}
+      - {x: -1.13499999, y: .589999974}
+      - {x: -1.31499994, y: .560000002}
+      - {x: -1.68499994, y: .459999979}
+      - {x: -1.995, y: .340000004}
+      - {x: -2.18499994, y: .25999999}
+      - {x: -2.36500001, y: .119999997}
+      - {x: -2.375, y: .0899999961}
+      - {x: -2.375, y: -.140000001}
+      - {x: -2.26499987, y: -.239999995}
+      - {x: -2.14499998, y: -.319999993}
+      - {x: -2.01499987, y: -.389999986}
+      - {x: -1.88499999, y: -.439999998}
+      - {x: -1.495, y: -.560000002}
+      - {x: -1.41499996, y: -.569999993}
+      - {x: -.995000005, y: -.669999957}
+      - {x: -.894999981, y: -.689999998}
+      - {x: -.405000001, y: -.779999971}
+      - {x: -.204999998, y: -.810000002}
+      - {x: .0949999988, y: -.849999964}
+      - {x: .294999987, y: -.870000005}
+      - {x: .61500001, y: -.870000005}
+      - {x: .759403527, y: -.874403298}
+      - {x: .914999843, y: -.874818146}
+      - {x: .66655463, y: -.830828369}
+      - {x: .70655489, y: -.839637101}
+      - {x: 1.08458519, y: -.900828004}
+      - {x: 1.45779788, y: -.948807478}
+      - {x: 1.66499996, y: -1}
+      - {x: 1.95499992, y: -1}
+      - {x: 2.01499987, y: -.959999979}
 --- !u!61 &6122890
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -144,13 +155,25 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132702}
   m_Enabled: 0
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4.75, y: 2}
+--- !u!61 &6197206
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132702}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -1, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.70000005}
 --- !u!114 &11484408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,6 +188,7 @@ MonoBehaviour:
   speed: 5
   cutVegetable1: {fileID: 104222, guid: 964b547ce7b174399bf927a45f35f90b, type: 2}
   cutVegetable2: {fileID: 128340, guid: c01b2bb760dc041d8808687c15971f4a, type: 2}
+  level: 0
   type: 1
 --- !u!212 &21241388
 SpriteRenderer:
@@ -184,18 +208,14 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1507171387
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300006, guid: 796ac4796343e8d46ac8c936b54d1415, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
