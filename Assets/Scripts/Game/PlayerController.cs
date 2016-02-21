@@ -47,18 +47,21 @@ public class PlayerController : MonoBehaviour {
 	}
 
 
-	void OnCollisionEnter2D(Collision2D collision){
+	void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.gameObject.tag == "Floor") {
             animator.SetTrigger("isGround");
             animator.SetFloat("JumpVal", 0.0f);
 			jumpCount = defaultJumpCount;
 		}
+	}
 
-		if (collision.gameObject.tag == "Boss") {
-            SoundManager.Instance.PlaySE(9);
-            animator.SetTrigger("Col");
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.tag == "Boss") {
+			SoundManager.Instance.PlaySE(9);
+			animator.SetTrigger("Col");
 			gameManager.GameOver ();
 		}
 	}
+
 
 }

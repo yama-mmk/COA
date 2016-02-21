@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d44851fb671641d89251f7604d9be8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 2006574914}
   RecoverySpeed: 1
   jumpSpeed: 12
   defaultPosition: 3

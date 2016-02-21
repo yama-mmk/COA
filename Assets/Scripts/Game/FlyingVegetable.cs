@@ -2,10 +2,11 @@
 using System.Collections;
 
 public class FlyingVegetable : MonoBehaviour {
+	public float speed = 0.05f;
 
 	public enum Type {
-		UP=0,
-		DOWN=1,
+		UP,
+		DOWN,
 	};
 
 	public Type type = Type.UP;
@@ -18,14 +19,14 @@ public class FlyingVegetable : MonoBehaviour {
 		switch (type) {
 		case Type.UP:
 			Vector2 vec1 = transform.position;
-			vec1.x += -0.1f;
-			vec1.y += -0.1f;
+			vec1.x += -speed;
+			vec1.y += speed;
 			transform.position = vec1;
 			break;
 		case Type.DOWN:
 			Vector2 vec2 = transform.position;
-			vec2.x += -0.1f;
-			vec2.y += -0.1f;
+			vec2.x += -speed;
+			vec2.y += -speed;
 			transform.position = vec2; 
 			break;
 		default:
