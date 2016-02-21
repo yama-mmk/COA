@@ -8,6 +8,7 @@ TagManager:
   - Floor
   - Vegetable
   - SoundManager
+  - Poison
   layers:
   - Default
   - TransparentFX
