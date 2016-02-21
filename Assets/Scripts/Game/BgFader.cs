@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BgFader : MonoBehaviour {
-	private float fadeTime = 20f;
+	private float fadeTime = 10f;
 	private GameManager manager;
 	private float readyTime;
 	private float currentRemainTime;
@@ -12,6 +12,7 @@ public class BgFader : MonoBehaviour {
 		manager = GameObject.Find("GameManager").GetComponent<GameManager>();
 		readyTime = manager.READY_TIME;
 		currentRemainTime = fadeTime;
+
 	}
 	
 	// Update is called once per frame
