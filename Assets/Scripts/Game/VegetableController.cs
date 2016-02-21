@@ -20,7 +20,7 @@ public class VegetableController : MonoBehaviour {
 
 	void Start(){
 		generator = GameObject.Find("VegetableGenerator").GetComponent<VegetableGenerator>();
-		level = 1 + (int)(generator.level) * 0.5f;
+		level = 1 + (int)(generator.level) * 0.8f;
 	}
 	
 	
