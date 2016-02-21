@@ -13,12 +13,15 @@ public class PlayerController : MonoBehaviour {
 	private bool collisionPoison = false;
 	private float damageTime = 0.0f;
 	
+    private bool dead = false;
+
 	Rigidbody2D rb;
 	int jumpCount;
 
     private Animator animator;
 
 	void Start () {
+        dead = false;
 		rb = GetComponent<Rigidbody2D> ();
 		jumpCount = defaultJumpCount;
 		manager = GameObject.Find ("GameManager").GetComponent<GameManager> (); 
@@ -30,6 +33,8 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
 		time += Time.deltaTime;
+
+        if (!dead) {
 		//ready
 		if (time < readyTime / 2.0f) {
 			transform.Translate (new Vector2 (4.0f * Time.deltaTime, 0.0f));
@@ -58,14 +63,13 @@ public class PlayerController : MonoBehaviour {
 			}
 		} else {
 			damageTime += Time.deltaTime;
-			animator.SetTrigger ("Col");
-			if(damageTime > 0.5f){
-				animator.SetTrigger ("Recovery");
+			if(damageTime > 1.0f){
+				// animator.SetTrigger ("Recovery");
 				collisionPoison = false;
 				damageTime = 0.0f;
-
 			}
 		}
+        }
 	}
 
 	//jump
@@ -88,12 +92,14 @@ public class PlayerController : MonoBehaviour {
 		if (other.gameObject.tag == "Boss") {
 			SoundManager.Instance.PlaySE (6);
 			animator.SetTrigger ("Col");
+            dead = true;
 			manager.GameOver ();
 		}
 		if (other.gameObject.tag == "Vegetable") {
 			jumpCount = defaultJumpCount;
 		}
 		if (other.gameObject.tag == "Poison"){
+            animator.SetTrigger("PoisonCol");
 			collisionPoison = true;
 		}
 
