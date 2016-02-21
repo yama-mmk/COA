@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -26,9 +27,10 @@ public class GameManager : MonoBehaviour {
     public LEVEL level = LEVEL.NONE;
 
     // 時間
-    public float time = 0.0f;
-
+    float time = 0.0f;
     private VegetableGenerator generator;
+    public Text score;
+    private int value;
 
 	void Start () {
         // 初期化
@@ -36,8 +38,9 @@ public class GameManager : MonoBehaviour {
         level = LEVEL.EASY;
         
         time = 0.0f;
-
         generator = GameObject.Find("VegetableGenerator").GetComponent<VegetableGenerator>();
+        value = 0;
+        score.text = value.ToString();
 
         SoundManager.Instance.PlayBGM(0);
 	}
@@ -54,6 +57,8 @@ public class GameManager : MonoBehaviour {
                 }
                 break;
             case State.PLAYING:
+                value++;
+                score.text = value.ToString();
                 if (time >= 4.0f) {
                     time = 0.0f;
                     if ((int)level == 3) {
