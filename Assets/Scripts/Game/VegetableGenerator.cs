@@ -19,31 +19,28 @@ public class VegetableGenerator : MonoBehaviour {
 	}
 
 	void Update () {
+		generate_time += Time.deltaTime;
         switch(level) {
             case GameManager.LEVEL.EASY:
-                generate_time += Time.deltaTime;
                 if (generate_time >= 3.0f) {
                     GenerateVegetable();
                     generate_time = 0.0f;
                 }
                 break;
             case GameManager.LEVEL.NORMAL:
-                generate_time += Time.deltaTime;
                 if (generate_time >= 2.5f) {
                     GenerateVegetable();
                     generate_time = 0.0f;
                 }
                 break;
             case GameManager.LEVEL.HARD:
-                generate_time += Time.deltaTime;
-                if (generate_time >= 2.0f) {
+                if (generate_time >= 1.5f) {
                     GenerateVegetable();
                     generate_time = 0.0f;
                 }
                 break;
             case GameManager.LEVEL.VERYHARD:
-                generate_time += Time.deltaTime;
-                if (generate_time >= 1.5f) {
+                if (generate_time >= 1.0f) {
                     GenerateVegetable();
                     generate_time = 0.0f;
                 }
@@ -56,10 +53,10 @@ public class VegetableGenerator : MonoBehaviour {
     void GenerateVegetable() {
         int num = Random.Range(0, vegetables.Count);
         if (num == 4) {
-            Instantiate(vegetables[num], new Vector2(12.0f, -3.0f), Quaternion.Euler(new Vector3(0,0, 90)));
-        } else {
-            Instantiate(vegetables[num], new Vector2(12.0f, -3.0f), Quaternion.identity);
-        }
+			Instantiate (vegetables [num], new Vector2 (12.0f, -3.0f), Quaternion.Euler (new Vector3 (0, 0, 90)));
+		} else {
+			Instantiate (vegetables [num], new Vector2 (12.0f, -3.0f), Quaternion.identity);
+		}
     }
 
     // レベル更新

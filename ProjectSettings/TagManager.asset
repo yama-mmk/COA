@@ -57,11 +57,14 @@ TagManager:
   - name: Item
     uniqueID: 3395911771
     locked: 0
-  - name: Vegetable
+  - name: BackVegetable
     uniqueID: 2787795909
     locked: 0
   - name: ground
     uniqueID: 3815060877
+    locked: 0
+  - name: FrontVegetable
+    uniqueID: 336983251
     locked: 0
   - name: Player
     uniqueID: 1917089511
