@@ -55,7 +55,14 @@ public class VegetableGenerator : MonoBehaviour {
         if (num == 4) {
 			Instantiate (vegetables [num], new Vector2 (12.0f, -3.0f), Quaternion.Euler (new Vector3 (0, 0, 90)));
 		} else {
-			Instantiate (vegetables [num], new Vector2 (12.0f, -3.0f), Quaternion.identity);
+			int rnd = Random.Range(0,2);
+			Debug.Log (rnd);
+			if(rnd == 0){
+				Instantiate (vegetables [num], new Vector2 (12.0f, -3.0f), Quaternion.identity);
+			} else {
+				Instantiate (vegetables [num], new Vector2 (12.0f, -1.0f), Quaternion.identity);
+			}
+
 		}
     }
 

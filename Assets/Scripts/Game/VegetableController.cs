@@ -7,6 +7,10 @@ public class VegetableController : MonoBehaviour {
 	public GameObject cutVegetable1;
 	public GameObject cutVegetable2;
 
+	private VegetableGenerator generator;
+	public float level;
+
+
     public enum Type {
         TYPE1 = 0,
         TYPE2 = 1,
@@ -14,11 +18,19 @@ public class VegetableController : MonoBehaviour {
 
     public Type type = Type.TYPE1;
 
+	void Start(){
+		generator = GameObject.Find("VegetableGenerator").GetComponent<VegetableGenerator>();
+		level = 1 + (int)(generator.level) * 0.5f;
+		Debug.Log (level);
+	}
+	
+	
 	void Update () {
+
         if (type == Type.TYPE1) {
-            gameObject.transform.Translate(new Vector2(speed * -0.01f, 0));
+            gameObject.transform.Translate(new Vector2(level * speed * -0.01f, 0));
         } else {
-            gameObject.transform.Translate(new Vector2(0, speed * 0.01f));
+            gameObject.transform.Translate(new Vector2(0,level * speed * 0.01f));
         }
 	}
 
