@@ -6,6 +6,7 @@ public class BossController : MonoBehaviour {
 	private GameManager manager;
 	private float time  = 0.0f;
 	private float readyTime;
+	private bool gameOver = false;
 	// Use this for initialization
 	void Start () {
 		manager = GameObject.Find ("GameManager").GetComponent<GameManager> ();
@@ -23,13 +24,16 @@ public class BossController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 
 		if (Slash != null && other.gameObject.tag == "Vegetable") {
-			SoundManager.Instance.PlaySE (Random.Range (0,3) + 3);
+			if(!gameOver){
+				SoundManager.Instance.PlaySE (Random.Range (0,3) + 3);
+			}
             Instantiate(Slash,
                         other.transform.position + new Vector3(-0.5f, 0.0f, 0.0f),
                         Quaternion.identity);
 		} 
 
         if (Slash != null && other.gameObject.tag == "Player") {
+			gameOver = true;
             Instantiate(Slash,
                         other.transform.position + new Vector3(-0.5f, 0.0f, 0.0f),
                         Quaternion.identity);

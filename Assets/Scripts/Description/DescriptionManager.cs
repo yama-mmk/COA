@@ -13,8 +13,7 @@ public class DescriptionManager : MonoBehaviour {
 
     public State state = State.DESCRIPTION;
 
-    private float time = 0;
-    private float fin_time = 0;
+	private float time = 0;
 
     public Canvas d_canvas;
     public Canvas s_canvas;
