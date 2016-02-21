@@ -37,14 +37,12 @@ public class GameManager : MonoBehaviour {
 
     public float READY_TIME = 3;
 
-    void Awake() {
-        // Fader.instance.BlackIn(2.0f);
-    }
-
 	void Start () {
         // 初期化
         state = State.READY;
         level = LEVEL.EASY;
+
+        Fader.instance.BlackIn(2.0f);
         
         time = 0.0f;
         generator = GameObject.Find("VegetableGenerator").GetComponent<VegetableGenerator>();
