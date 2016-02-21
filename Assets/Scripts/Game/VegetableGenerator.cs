@@ -17,6 +17,7 @@ public class VegetableGenerator : MonoBehaviour {
         generate_time = 0.0f;
 	}
 
+
 	void Update () {
 		generate_time += Time.deltaTime;
         switch(level) {

@@ -2990,7 +2990,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11434590, guid: 19a98ebb5398bb04f9e8f0ec1c0d3cc9, type: 2}
       propertyPath: volume.BGM
-      value: 0.1
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434590, guid: 19a98ebb5398bb04f9e8f0ec1c0d3cc9, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19a98ebb5398bb04f9e8f0ec1c0d3cc9, type: 2}
