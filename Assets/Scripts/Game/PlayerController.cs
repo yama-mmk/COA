@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.tag == "Boss") {
-			SoundManager.Instance.PlaySE (6);
+			SoundManager.Instance.PlaySE(6);
 			animator.SetTrigger ("Col");
 			manager.GameOver ();
 		}

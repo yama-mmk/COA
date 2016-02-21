@@ -37,7 +37,7 @@ public class DescriptionManager : MonoBehaviour {
                     SoundManager.Instance.PlaySE(0);
                     d_canvas.gameObject.SetActive(false);
                     s_canvas.gameObject.SetActive(true);
-                    Fader.instance.WhiteOut(1.0f);
+                    Fader.instance.WhiteIn(1.0f);
                     state = State.SLIDE;
                 }
                 break;

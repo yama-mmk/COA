@@ -22,13 +22,18 @@ public class BossController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 
-		if (Slash != null && (other.gameObject.tag == "Vegetable" || other.gameObject.tag == "Player")) {
+		if (Slash != null && other.gameObject.tag == "Vegetable") {
 			SoundManager.Instance.PlaySE (Random.Range (0,3) + 3);
-			Instantiate (Slash,
-			            other.transform.position + new Vector3(-0.5f, 0.0f, 0.0f),
-			            Quaternion.identity);
+            Instantiate(Slash,
+                        other.transform.position + new Vector3(-0.5f, 0.0f, 0.0f),
+                        Quaternion.identity);
+		} 
 
-		}
+        if (Slash != null && other.gameObject.tag == "Player") {
+            Instantiate(Slash,
+                        other.transform.position + new Vector3(-0.5f, 0.0f, 0.0f),
+                        Quaternion.identity);
+        }
 	}
 
 
