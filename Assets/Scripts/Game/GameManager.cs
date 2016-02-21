@@ -29,8 +29,11 @@ public class GameManager : MonoBehaviour {
     // 時間
     float time = 0.0f;
     private VegetableGenerator generator;
-    public Text score;
-    private int value;
+
+    public Text score;   // テキスト表示用
+    private int value;   // テキストに表示するスコア
+
+    static public int final_value; // シーンをまたいでスコアを保管する変数
 
 	void Start () {
         // 初期化
@@ -41,6 +44,7 @@ public class GameManager : MonoBehaviour {
         generator = GameObject.Find("VegetableGenerator").GetComponent<VegetableGenerator>();
         value = 0;
         score.text = value.ToString();
+        final_value = 0;
 
         SoundManager.Instance.PlayBGM(0);
 	}
@@ -71,9 +75,13 @@ public class GameManager : MonoBehaviour {
                 }
                 break;
             case State.FINISH:
+                Time.timeScale = 0.3f;
 				time += Time.deltaTime;
-				if(time > 4.0f) {
-					Application.LoadLevel("Result");
+				if(time > 1.0f) {
+                    final_value = value;
+					// Application.LoadLevel("Result");
+                    // FadeManager.Instance.LoadLevel("Result", 2.0f);
+                    Fader.instance.WhiteOut(0.5f, "Result");
 				}
                 break;
             default:
