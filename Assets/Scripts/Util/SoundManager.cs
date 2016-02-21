@@ -53,8 +53,8 @@ public class SoundManager : MonoBehaviour {
 
         // BGM AudioSource
         BGMsource = gameObject.AddComponent<AudioSource>();
-        // BGMはループを無効にする
-        BGMsource.loop = false;
+        // BGMはループを有効にする
+        BGMsource.loop = true;
 
         // SE AudioSource
         for (int i = 0; i < SEsources.Length; i++) {
