@@ -97,6 +97,7 @@ GameObject:
   - 4: {fileID: 119130678}
   - 212: {fileID: 119130680}
   - 114: {fileID: 119130679}
+  - 114: {fileID: 119130681}
   m_Layer: 0
   m_Name: Cloud6
   m_TagString: Floor
@@ -156,6 +157,17 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6b2f1bd4375e61f40aa47cb82d20ba95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &119130681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 119130677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d4aa1fcb7c147b7a415933224d0a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &131053072
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +552,7 @@ GameObject:
   - 4: {fileID: 259136642}
   - 212: {fileID: 259136641}
   - 114: {fileID: 259136640}
+  - 114: {fileID: 259136643}
   m_Layer: 0
   m_Name: Cloud5
   m_TagString: Floor
@@ -599,6 +612,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 583430436}
   m_RootOrder: 1
+--- !u!114 &259136643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 259136639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d4aa1fcb7c147b7a415933224d0a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &322896631
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +805,7 @@ GameObject:
   - 4: {fileID: 404204717}
   - 212: {fileID: 404204719}
   - 114: {fileID: 404204718}
+  - 114: {fileID: 404204720}
   m_Layer: 0
   m_Name: Cloud
   m_TagString: Floor
@@ -840,6 +865,17 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: beaa16b5596e78c4b8ef4a7315c6b7a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &404204720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 404204716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d4aa1fcb7c147b7a415933224d0a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &468694738
 Prefab:
   m_ObjectHideFlags: 0
@@ -951,8 +987,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1517590045
-  m_SortingOrder: 0
+  m_SortingLayerID: -1186203949
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 08293ce1da11af14ebc1cdd41120dbd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &502056952
@@ -964,6 +1000,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 502056954}
   - 212: {fileID: 502056953}
+  - 114: {fileID: 502056955}
   m_Layer: 0
   m_Name: BackGround2
   m_TagString: Untagged
@@ -1009,6 +1046,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1577863404}
   m_RootOrder: 1
+--- !u!114 &502056955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 502056952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24ed493501cf4a9a9a85b8d1d110eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &532290427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,6 +1067,7 @@ GameObject:
   - 4: {fileID: 532290428}
   - 212: {fileID: 532290430}
   - 114: {fileID: 532290429}
+  - 114: {fileID: 532290431}
   m_Layer: 0
   m_Name: Cloud3
   m_TagString: Floor
@@ -1078,6 +1127,17 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6b2f1bd4375e61f40aa47cb82d20ba95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &532290431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 532290427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d4aa1fcb7c147b7a415933224d0a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &541245832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,8 +1203,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 627126717
-  m_SortingOrder: 0
+  m_SortingLayerID: -1186203949
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d6338d235889ada4da02e22373e0b837, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &583430435
@@ -1256,6 +1316,7 @@ GameObject:
   - 4: {fileID: 747504579}
   - 212: {fileID: 747504576}
   - 114: {fileID: 747504578}
+  - 114: {fileID: 747504577}
   m_Layer: 0
   m_Name: river
   m_TagString: Floor
@@ -1289,6 +1350,17 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 49446de972b743a458373262a52bc377, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &747504577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 747504575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24ed493501cf4a9a9a85b8d1d110eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &747504578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,6 +1397,7 @@ GameObject:
   - 4: {fileID: 881357792}
   - 212: {fileID: 881357795}
   - 114: {fileID: 881357794}
+  - 114: {fileID: 881357793}
   m_Layer: 0
   m_Name: river2
   m_TagString: Floor
@@ -1344,6 +1417,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 246134214}
   m_RootOrder: 2
+--- !u!114 &881357793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 881357791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24ed493501cf4a9a9a85b8d1d110eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &881357794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1509,8 +1593,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 627126717
-  m_SortingOrder: 0
+  m_SortingLayerID: -1186203949
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d6338d235889ada4da02e22373e0b837, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &989621246
@@ -1566,8 +1650,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1517590045
-  m_SortingOrder: 0
+  m_SortingLayerID: -1186203949
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 08293ce1da11af14ebc1cdd41120dbd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &989621249
@@ -1592,6 +1676,7 @@ GameObject:
   - 4: {fileID: 1102851482}
   - 212: {fileID: 1102851484}
   - 114: {fileID: 1102851483}
+  - 114: {fileID: 1102851485}
   m_Layer: 0
   m_Name: Cloud4
   m_TagString: Floor
@@ -1651,6 +1736,17 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: beaa16b5596e78c4b8ef4a7315c6b7a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1102851485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102851481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d4aa1fcb7c147b7a415933224d0a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1247234613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1661,6 +1757,7 @@ GameObject:
   - 4: {fileID: 1247234617}
   - 212: {fileID: 1247234616}
   - 114: {fileID: 1247234615}
+  - 114: {fileID: 1247234614}
   m_Layer: 0
   m_Name: Mountain
   m_TagString: Floor
@@ -1668,6 +1765,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1247234614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1247234613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24ed493501cf4a9a9a85b8d1d110eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1247234615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1758,7 +1866,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1441618553
+  m_SortingLayerID: -1186203949
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4af81b6d2252120458054a773759876d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1785,6 +1893,7 @@ GameObject:
   - 212: {fileID: 1438178364}
   - 114: {fileID: 1438178363}
   - 61: {fileID: 1438178362}
+  - 114: {fileID: 1438178366}
   m_Layer: 0
   m_Name: floor
   m_TagString: Floor
@@ -1857,6 +1966,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 246134214}
   m_RootOrder: 4
+--- !u!114 &1438178366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1438178361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24ed493501cf4a9a9a85b8d1d110eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1458983576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,6 +2065,7 @@ GameObject:
   - 212: {fileID: 1504652889}
   - 114: {fileID: 1504652888}
   - 61: {fileID: 1504652887}
+  - 114: {fileID: 1504652890}
   m_Layer: 0
   m_Name: floor2
   m_TagString: Floor
@@ -2017,6 +2138,17 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c92ba7cb8793e2f48a36a0a13e8a75f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1504652890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1504652885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24ed493501cf4a9a9a85b8d1d110eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1506229718
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,6 +2159,7 @@ GameObject:
   - 4: {fileID: 1506229722}
   - 212: {fileID: 1506229721}
   - 114: {fileID: 1506229720}
+  - 114: {fileID: 1506229719}
   m_Layer: 0
   m_Name: Mountain2
   m_TagString: Floor
@@ -2034,6 +2167,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1506229719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506229718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24ed493501cf4a9a9a85b8d1d110eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1506229720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2284,8 +2428,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -479906419
-  m_SortingOrder: 0
+  m_SortingLayerID: -1186203949
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: a637866f35045f649987236571f099ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1758063018
@@ -2411,6 +2555,7 @@ GameObject:
   - 4: {fileID: 1915572936}
   - 212: {fileID: 1915572938}
   - 114: {fileID: 1915572937}
+  - 114: {fileID: 1915572939}
   m_Layer: 0
   m_Name: Cloud2
   m_TagString: Floor
@@ -2470,6 +2615,17 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: efdc1875376bd2c43a5e2c76a863ff9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1915572939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915572935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d4aa1fcb7c147b7a415933224d0a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2006574912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2512,6 +2668,7 @@ MonoBehaviour:
   state: -1
   level: -1
   score: {fileID: 681467715}
+  READY_TIME: 3
 --- !u!1 &2033774053
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,7 +2748,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -479906419
-  m_SortingOrder: 0
+  m_SortingLayerID: -1186203949
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: a637866f35045f649987236571f099ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
