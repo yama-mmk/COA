@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour {
         score.text = value.ToString();
         final_value = 0;
 
-        SoundManager.Instance.PlayBGM(0);
+        SoundManager.Instance.PlayBGM((int)Random.Range(0,3));
 	}
 
 	void Update () {

@@ -34,7 +34,7 @@ public class DescriptionManager : MonoBehaviour {
         switch(state) {
             case State.DESCRIPTION:
                 if (Input.GetButtonDown("Fire1")) {
-                    SoundManager.Instance.PlaySE(0);
+                    SoundManager.Instance.PlaySE((int)Random.Range(0, 1));
                     d_canvas.gameObject.SetActive(false);
                     s_canvas.gameObject.SetActive(true);
                     Fader.instance.WhiteIn(1.0f);
@@ -49,7 +49,7 @@ public class DescriptionManager : MonoBehaviour {
                 }
 
                 if (Input.GetButtonDown("Fire1")) {
-                    SoundManager.Instance.PlaySE(0);
+                    SoundManager.Instance.PlaySE((int)Random.Range(0, 1));
                     state = State.NEXT;
                 }
                 break;
