@@ -142,6 +142,7 @@ GameObject:
   - 222: {fileID: 174723440}
   - 114: {fileID: 174723439}
   - 114: {fileID: 174723438}
+  - 114: {fileID: 174723441}
   m_Layer: 5
   m_Name: highscore
   m_TagString: Untagged
@@ -178,8 +179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  colorTop: {r: 1, g: 0.18382353, b: 0.18382353, a: 1}
-  colorBottom: {r: 0.9264706, g: 0.9264706, b: 0.9264706, a: 1}
+  colorTop: {r: 1, g: 0, b: 0, a: 1}
+  colorBottom: {r: 1, g: 1, b: 1, a: 1}
   colorLeft: {r: 1, g: 0, b: 0, a: 1}
   colorRight: {r: 0, g: 0, b: 1, a: 1}
 --- !u!114 &174723439
@@ -221,6 +222,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 174723436}
+--- !u!114 &174723441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 174723436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 4, y: 4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &322896631
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +333,7 @@ GameObject:
   - 222: {fileID: 561230117}
   - 114: {fileID: 561230116}
   - 114: {fileID: 561230115}
+  - 114: {fileID: 561230118}
   m_Layer: 5
   m_Name: score_text
   m_TagString: Untagged
@@ -397,6 +413,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 561230113}
+--- !u!114 &561230118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 561230113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &739433092
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,6 +656,7 @@ GameObject:
   - 224: {fileID: 1392690176}
   - 222: {fileID: 1392690178}
   - 114: {fileID: 1392690177}
+  - 114: {fileID: 1392690179}
   m_Layer: 5
   m_Name: Comment_text
   m_TagString: Untagged
@@ -689,6 +720,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1392690175}
+--- !u!114 &1392690179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1392690175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1419115979
 GameObject:
   m_ObjectHideFlags: 0
