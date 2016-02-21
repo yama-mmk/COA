@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Boss
+  - Floor
+  - Vegetable
+  - SoundManager
   layers:
   - Default
   - TransparentFX
@@ -40,4 +44,37 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 1441618553
+    locked: 0
+  - name: Cloud
+    uniqueID: 1978858231
+    locked: 0
+  - name: river
+    uniqueID: 2777377251
+    locked: 0
+  - name: Item
+    uniqueID: 3395911771
+    locked: 0
+  - name: BackVegetable
+    uniqueID: 2787795909
+    locked: 0
+  - name: ground
+    uniqueID: 3815060877
+    locked: 0
+  - name: FrontVegetable
+    uniqueID: 336983251
+    locked: 0
+  - name: Player
+    uniqueID: 1917089511
+    locked: 0
+  - name: Boss
+    uniqueID: 3517868431
+    locked: 0
+  - name: cutVegetable
+    uniqueID: 2649707933
+    locked: 0
+  - name: Slash
+    uniqueID: 1077155685
     locked: 0
