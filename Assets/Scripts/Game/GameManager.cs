@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour {
 
     public float READY_TIME = 3;
 
+    public float sum_time;  // ゲームが開始されてからの時間
+
 	void Start () {
         // 初期化
         state = State.READY;
@@ -45,6 +47,8 @@ public class GameManager : MonoBehaviour {
         Fader.instance.BlackIn(2.0f);
         
         time = 0.0f;
+        sum_time = 0.0f;
+
         generator = GameObject.Find("VegetableGenerator").GetComponent<VegetableGenerator>();
         value = 0;
         score.text = value.ToString();
@@ -65,6 +69,7 @@ public class GameManager : MonoBehaviour {
                 }
                 break;
             case State.PLAYING:
+                sum_time += Time.deltaTime;
                 value++;
                 score.text = value.ToString();
                 if (time >= 4.0f) {

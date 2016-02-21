@@ -10,9 +10,11 @@ public class VegetableGenerator : MonoBehaviour {
 
     float generate_time = 0.0f;
 
+    private GameManager manager;
 
 	void Start () {
         level = GameManager.LEVEL.NONE;
+        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         generate_time = 0.0f;
 	}
@@ -51,7 +53,16 @@ public class VegetableGenerator : MonoBehaviour {
 	}
 
     void GenerateVegetable() {
-        int num = Random.Range(0, vegetables.Count);
+        float time = manager.sum_time;
+        
+        int num;
+
+        if (time < 25) {
+            num = Random.Range(0, (int)(vegetables.Count / 2));
+        } else {
+            num = Random.Range(0, vegetables.Count);
+        }
+
         if (num == 4) {
 			Instantiate (vegetables [num], new Vector2 (12.0f, -3.0f), Quaternion.Euler (new Vector3 (0, 0, 90)));
 		} else {

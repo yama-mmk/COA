@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BgFader : MonoBehaviour {
-	private float fadeTime = 10f;
+	private float fadeTime = 20f;
 	private GameManager manager;
 	private float readyTime;
 	private float currentRemainTime;
