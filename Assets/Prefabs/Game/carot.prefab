@@ -13,6 +13,7 @@ GameObject:
   - 50: {fileID: 5022816}
   - 114: {fileID: 11459080}
   - 60: {fileID: 6090706}
+  - 61: {fileID: 6190914}
   m_Layer: 0
   m_Name: carot
   m_TagString: Vegetable
@@ -144,6 +145,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -.5}
   serializedVersion: 2
   m_Size: {x: 4.75, y: 1}
+--- !u!61 &6190914
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133920}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: .600000024}
+  serializedVersion: 2
+  m_Size: {x: 4, y: 1}
 --- !u!114 &11459080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -158,6 +172,7 @@ MonoBehaviour:
   speed: 8
   cutVegetable1: {fileID: 104222, guid: 964b547ce7b174399bf927a45f35f90b, type: 2}
   cutVegetable2: {fileID: 128340, guid: c01b2bb760dc041d8808687c15971f4a, type: 2}
+  level: 0
   type: 0
 --- !u!212 &21271704
 SpriteRenderer:

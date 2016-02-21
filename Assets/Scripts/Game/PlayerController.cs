@@ -57,9 +57,12 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.tag == "Boss") {
-			SoundManager.Instance.PlaySE(9);
-			animator.SetTrigger("Col");
+			SoundManager.Instance.PlaySE (9);
+			animator.SetTrigger ("Col");
 			gameManager.GameOver ();
+		}
+		if (other.gameObject.tag == "Vegetable"){
+			jumpCount = defaultJumpCount;
 		}
 	}
 

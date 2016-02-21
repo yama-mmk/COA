@@ -48,6 +48,9 @@ TagManager:
   - name: BackGround
     uniqueID: 1441618553
     locked: 0
+  - name: Mountain
+    uniqueID: 627126717
+    locked: 0
   - name: Cloud
     uniqueID: 1978858231
     locked: 0

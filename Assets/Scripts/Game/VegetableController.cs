@@ -8,7 +8,7 @@ public class VegetableController : MonoBehaviour {
 	public GameObject cutVegetable2;
 
 	private VegetableGenerator generator;
-	public float level;
+	private float level;
 
 
     public enum Type {
@@ -21,7 +21,6 @@ public class VegetableController : MonoBehaviour {
 	void Start(){
 		generator = GameObject.Find("VegetableGenerator").GetComponent<VegetableGenerator>();
 		level = 1 + (int)(generator.level) * 0.5f;
-		Debug.Log (level);
 	}
 	
 	
