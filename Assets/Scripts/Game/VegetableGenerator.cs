@@ -5,14 +5,12 @@ using System.Collections.Generic;
 public class VegetableGenerator : MonoBehaviour {
 
     public List<GameObject> vegetables;
-
-    private GameManager manager;
+	
     public GameManager.LEVEL level;
 
     float generate_time = 0.0f;
 
 	void Start () {
-        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         level = GameManager.LEVEL.NONE;
 
         generate_time = 0.0f;
@@ -56,7 +54,6 @@ public class VegetableGenerator : MonoBehaviour {
 			Instantiate (vegetables [num], new Vector2 (12.0f, -3.0f), Quaternion.Euler (new Vector3 (0, 0, 90)));
 		} else {
 			int rnd = Random.Range(0,2);
-			Debug.Log (rnd);
 			if(rnd == 0){
 				Instantiate (vegetables [num], new Vector2 (12.0f, -3.0f), Quaternion.identity);
 			} else {

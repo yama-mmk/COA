@@ -2,11 +2,14 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-	public GameManager gameManager;
 	public float RecoverySpeed = 1.0f;
 	public float jumpSpeed = 30f;
 	public float defaultPosition = 0;
 	public int defaultJumpCount = 2; 
+	public GameObject textObject;
+	private GameManager manager;
+	private float time  = 0.0f;
+	private float readyTime;
 	
 	Rigidbody2D rb;
 	int jumpCount;
@@ -16,27 +19,42 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		jumpCount = defaultJumpCount;
-		gameManager = GameObject.Find ("GameManager").GetComponent<GameManager> (); 
+		manager = GameObject.Find ("GameManager").GetComponent<GameManager> (); 
         animator = gameObject.GetComponent<Animator>();
+		readyTime = manager.READY_TIME;
+		textObject.SetActive (false);
 	}
 	
 	void Update () {
 
-		if (Input.GetButtonDown ("Fire1") && jumpCount > 0) {
-            SoundManager.Instance.PlaySE(4);
-			JumpAction ();
-            animator.SetTrigger("Jump");
-		}
+		time += Time.deltaTime;
+		//ready
+		if (time < readyTime / 2.0f) {
+			transform.Translate (new Vector2 (4.0f * Time.deltaTime, 0.0f));
+		
+		//text appear
+		} else if (time < readyTime) {
+			textObject.SetActive (true);
 
-		if (transform.position.x < defaultPosition) {
-			rb.velocity = new Vector2(RecoverySpeed, rb.velocity.y);
-		}
+		//game start
+		}else{
+			Destroy(textObject);
+			if (Input.GetButtonDown ("Fire1") && jumpCount > 0) {
+				SoundManager.Instance.PlaySE (4);
+				JumpAction ();
+				animator.SetTrigger ("Jump");
+			}
 
-        if (rb.velocity.y < -0.01f) {
-            animator.SetFloat("JumpVal", -1.0f);
-        } else if (rb.velocity.y > 0.01f) {
-            animator.SetFloat("JumpVal", 1.0f);
-        }
+			if (transform.position.x < defaultPosition) {
+				rb.velocity = new Vector2 (RecoverySpeed, rb.velocity.y);
+			}
+
+			if (rb.velocity.y < -0.01f) {
+				animator.SetFloat ("JumpVal", -1.0f);
+			} else if (rb.velocity.y > 0.01f) {
+				animator.SetFloat ("JumpVal", 1.0f);
+			}
+		}
 	}
 
 	//jump
@@ -59,7 +77,9 @@ public class PlayerController : MonoBehaviour {
 		if (other.gameObject.tag == "Boss") {
 			SoundManager.Instance.PlaySE (9);
 			animator.SetTrigger ("Col");
-			gameManager.GameOver ();
+			manager.GameOver ();
+
+
 		}
 		if (other.gameObject.tag == "Vegetable"){
 			jumpCount = defaultJumpCount;

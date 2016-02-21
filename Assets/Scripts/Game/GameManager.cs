@@ -69,13 +69,16 @@ public class GameManager : MonoBehaviour {
                 score.text = value.ToString();
                 if (time >= 4.0f) {
                     time = 0.0f;
+					/*
                     if ((int)level == 3) {
                         level = 0;
                         generator.UpdateLevel(level);
                     } else {
-                        level++;
+                    */
+                    if((int)level != 2) {
+						level++;
                         generator.UpdateLevel(level);
-                    }
+            	    }
                 }
                 break;
             case State.FINISH:
@@ -94,7 +97,6 @@ public class GameManager : MonoBehaviour {
 	}
 
     public void GameOver() {
-        Debug.Log("Game Over");
 		state = State.FINISH;
 		time = 0;
     }
