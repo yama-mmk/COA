@@ -18,6 +18,8 @@ public class ResultManager : MonoBehaviour {
     private bool isUpdate = false;
 
     void Start() {
+        SoundManager.Instance.PlayBGM(3);
+
         Time.timeScale = 1.0f;
         Fader.instance.WhiteIn(2.0f);
         score = GameManager.final_value;
