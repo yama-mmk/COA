@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour {
 		}else{
 			Destroy(textObject);
 			if (Input.GetButtonDown ("Fire1") && jumpCount > 0) {
-				SoundManager.Instance.PlaySE (4);
+				SoundManager.Instance.PlaySE (2);
 				JumpAction ();
 				animator.SetTrigger ("Jump");
 			}
@@ -75,11 +75,9 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.tag == "Boss") {
-			SoundManager.Instance.PlaySE (9);
+			SoundManager.Instance.PlaySE (6);
 			animator.SetTrigger ("Col");
 			manager.GameOver ();
-
-
 		}
 		if (other.gameObject.tag == "Vegetable"){
 			jumpCount = defaultJumpCount;

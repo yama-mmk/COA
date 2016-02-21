@@ -18,6 +18,7 @@ public class ResultManager : MonoBehaviour {
     private bool isUpdate = false;
 
     void Start() {
+        SoundManager.Instance.StopBGM();
         SoundManager.Instance.PlayBGM(3);
 
         Time.timeScale = 1.0f;
@@ -62,6 +63,7 @@ public class ResultManager : MonoBehaviour {
     void Update() {
         if (Input.GetButtonDown("Fire1")) {
             // Application.LoadLevel("Game");
+            SoundManager.Instance.PlaySE(0);
             Fader.instance.WhiteOut(1.0f, "Title");
         }
     }

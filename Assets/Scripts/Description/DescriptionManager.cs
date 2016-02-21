@@ -22,6 +22,8 @@ public class DescriptionManager : MonoBehaviour {
     public Animator animator;
 
     void Start() {
+        SoundManager.Instance.StopBGM();
+        SoundManager.Instance.PlayBGM(4);
         Fader.instance.BlackIn(1.0f);
 
         d_canvas.gameObject.SetActive(true);
@@ -32,6 +34,7 @@ public class DescriptionManager : MonoBehaviour {
         switch(state) {
             case State.DESCRIPTION:
                 if (Input.GetButtonDown("Fire1")) {
+                    SoundManager.Instance.PlaySE(0);
                     d_canvas.gameObject.SetActive(false);
                     s_canvas.gameObject.SetActive(true);
                     Fader.instance.WhiteOut(1.0f);
@@ -46,6 +49,7 @@ public class DescriptionManager : MonoBehaviour {
                 }
 
                 if (Input.GetButtonDown("Fire1")) {
+                    SoundManager.Instance.PlaySE(0);
                     state = State.NEXT;
                 }
                 break;
