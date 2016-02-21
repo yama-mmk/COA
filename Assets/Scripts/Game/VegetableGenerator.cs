@@ -10,6 +10,7 @@ public class VegetableGenerator : MonoBehaviour {
 
     float generate_time = 0.0f;
 
+
 	void Start () {
         level = GameManager.LEVEL.NONE;
 
