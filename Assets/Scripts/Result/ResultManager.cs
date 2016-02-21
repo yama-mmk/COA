@@ -10,7 +10,7 @@ public class ResultManager : MonoBehaviour {
     public Sprite normal;
     public Sprite good;
 
-    private Image img;
+    public Image img;
     public Text comment_text;
     public Text score_text;
     public Text highscore_text;
