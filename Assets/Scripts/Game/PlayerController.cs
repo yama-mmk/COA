@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour {
 	private GameManager manager;
 	private float time  = 0.0f;
 	private float readyTime;
+	private bool collisionPoison = false;
+	private float damageTime = 0.0f;
 	
 	Rigidbody2D rb;
 	int jumpCount;
@@ -32,13 +34,13 @@ public class PlayerController : MonoBehaviour {
 		if (time < readyTime / 2.0f) {
 			transform.Translate (new Vector2 (4.0f * Time.deltaTime, 0.0f));
 		
-		//text appear
+			//text appear
 		} else if (time < readyTime) {
 			textObject.SetActive (true);
 
-		//game start
-		}else{
-			Destroy(textObject);
+			//game start
+		} else if (!collisionPoison) {
+			Destroy (textObject);
 			if (Input.GetButtonDown ("Fire1") && jumpCount > 0) {
 				SoundManager.Instance.PlaySE (2);
 				JumpAction ();
@@ -53,6 +55,15 @@ public class PlayerController : MonoBehaviour {
 				animator.SetFloat ("JumpVal", -1.0f);
 			} else if (rb.velocity.y > 0.01f) {
 				animator.SetFloat ("JumpVal", 1.0f);
+			}
+		} else {
+			damageTime += Time.deltaTime;
+			animator.SetTrigger ("Col");
+			if(damageTime > 0.5f){
+				animator.SetTrigger ("Recovery");
+				collisionPoison = false;
+				damageTime = 0.0f;
+
 			}
 		}
 	}
@@ -75,14 +86,19 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.tag == "Boss") {
-			SoundManager.Instance.PlaySE(6);
+			SoundManager.Instance.PlaySE (6);
 			animator.SetTrigger ("Col");
 			manager.GameOver ();
 		}
-		if (other.gameObject.tag == "Vegetable"){
+		if (other.gameObject.tag == "Vegetable") {
 			jumpCount = defaultJumpCount;
 		}
+		if (other.gameObject.tag == "Poison"){
+			collisionPoison = true;
+		}
+
 	}
+
 
 
 }

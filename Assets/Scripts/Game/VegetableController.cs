@@ -9,6 +9,7 @@ public class VegetableController : MonoBehaviour {
 
 	private VegetableGenerator generator;
 	private float level;
+	private bool collisionPlayer = false;
 
 
     public enum Type {
@@ -47,5 +48,16 @@ public class VegetableController : MonoBehaviour {
 
 			Destroy (gameObject);
 		}
+		if (gameObject.tag == "Poison" && other.gameObject.tag == "Player") {
+			if (!collisionPlayer) {
+				other.GetComponent<Rigidbody2D> ().velocity = new Vector2 (-8.0f, 8.0f);
+			}
+			collisionPlayer = true;
+		}
+
+
 	}
+
+
+
 }
